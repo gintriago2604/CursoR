@@ -1,0 +1,21 @@
+getwd()
+wd1<-"D:/Personal/Cursos/Programacion en R/CursoR/read_data" #asignamos el espacio de trabajo 1
+setwd(wd1)
+list.files()
+data_txt<-read.table(file="data_ejer_tab.txt", sep="\t", dec=",", header=T)
+names(data_txt)
+class(data_txt)
+dim(data_txt)
+summary(data_txt)
+mean(data_txt$Egresos_mensuales)
+?mean
+mean(data_txt$Egresos_mensuales, na.rm = T)
+summary(data_txt$Ingresos_mensuales, rm.na=T)
+edad<-data_txt$Edad
+class(edad)
+is.double(edad)
+edad<-as.double(edad)
+str(edad)
+typeof(edad)
+edad1<-edad[c(5,8,10)]
+edad1[3]
